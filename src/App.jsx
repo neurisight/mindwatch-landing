@@ -44,12 +44,11 @@ const NeuriSightLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Activity className="w-8 h-8 text-teal-600" />
+              <img src="/logo1.png" alt="NeuriSight Logo" className="w-8" />
               <span className="text-xl font-bold text-gray-900">
                 NeuriSight
               </span>
             </div>
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <a href="#how" className="text-gray-700 hover:text-teal-600">
@@ -325,7 +324,7 @@ const NeuriSightLanding = () => {
                 intervention for agitation triggers.
               </p>
               <div className="bg-white rounded-lg p-4">
-                <BarChart3 className="w-full h-32 text-gray-400" />
+                <BarChart3 className="w-full h-32 text-teal-600" />
               </div>
             </div>
 
@@ -596,7 +595,7 @@ const NeuriSightLanding = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Activity className="w-8 h-8 text-teal-400" />
+                <img src="/logo1-trans.png" alt="NeuriSight Logo" className="w-8" />
                 <span className="text-xl font-bold">NeuriSight</span>
               </div>
               <p className="text-gray-400 text-sm">
