@@ -9,9 +9,9 @@ import {
   UserCheck,
   Brain,
 } from "lucide-react";
+import Navigation from './components/Navigation'
 
 const NeuriSightLanding = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,84 +40,7 @@ const NeuriSightLanding = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <img src="/logo1.png" alt="NeuriSight Logo" className="w-8" />
-              <span className="text-xl font-bold text-gray-900">
-                NeuriSight
-              </span>
-            </div>
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#how" className="text-gray-700 hover:text-teal-600">
-                How It Works
-              </a>
-              <a href="#benefits" className="text-gray-700 hover:text-teal-600">
-                Benefits
-              </a>
-              <a
-                href="#use-cases"
-                className="text-gray-700 hover:text-teal-600"
-              >
-                Use Cases
-              </a>
-              <a href="#contact" className="text-gray-700 hover:text-teal-600">
-                Contact
-              </a>
-              <button className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-                Request Demo
-              </button>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="md:hidden pb-4">
-              <a
-                href="#how"
-                className="block py-2 text-gray-700 hover:text-teal-600"
-              >
-                How It Works
-              </a>
-              <a
-                href="#benefits"
-                className="block py-2 text-gray-700 hover:text-teal-600"
-              >
-                Benefits
-              </a>
-              <a
-                href="#use-cases"
-                className="block py-2 text-gray-700 hover:text-teal-600"
-              >
-                Use Cases
-              </a>
-              <a
-                href="#contact"
-                className="block py-2 text-gray-700 hover:text-teal-600"
-              >
-                Contact
-              </a>
-              <button className="w-full mt-2 bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-                Request Demo
-              </button>
-            </div>
-          )}
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-50 to-blue-50 py-12 md:py-20">
