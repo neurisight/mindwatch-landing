@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <img src="/logo1.png" alt="NeuriSight Logo" className="w-8" />
+            <img src="/logo1.png" alt="NeuriSight Logo" className="w-8 h-8" />
             <span className="text-xl font-bold text-gray-900">NeuriSight</span>
           </div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-teal-600">
+              Home
+            </Link>
             <a href="#how" className="text-gray-700 hover:text-teal-600">
               How It Works
             </a>
@@ -22,6 +28,9 @@ const Navigation = () => {
             <a href="#use-cases" className="text-gray-700 hover:text-teal-600">
               Use Cases
             </a>
+            <Link to="/team" className="text-gray-700 hover:text-teal-600">
+              Our Team
+            </Link>
             <a href="#contact" className="text-gray-700 hover:text-teal-600">
               Contact
             </a>
@@ -46,6 +55,10 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4">
+            <Link to="/" className="text-gray-700 hover:text-teal-600">
+              Home
+            </Link>
+
             <a
               href="#how"
               className="block py-2 text-gray-700 hover:text-teal-600"
@@ -64,6 +77,7 @@ const Navigation = () => {
             >
               Use Cases
             </a>
+            <Link to="/team" className="text-gray-700 hover:text-teal-600">Our Team</Link>
             <a
               href="#contact"
               className="block py-2 text-gray-700 hover:text-teal-600"
