@@ -106,7 +106,7 @@ const NeuriSightLanding = () => {
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">✓</span>
                   <span>
-                    Continuous monitoring with real-time alert devices
+                    Continuous monitoring with real-time risk-score devices
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -181,7 +181,7 @@ const NeuriSightLanding = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Clinician Dashboard</h3>
               <p className="text-gray-600 mb-4">
-                Staff view the early alerts, add real context to behavior data,
+                Staff view the early warning scores, add real context to behavior data,
                 and take action for prevention.
               </p>
               <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
