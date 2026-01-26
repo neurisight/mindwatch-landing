@@ -1,53 +1,101 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config({ path: '.env.local' });
+
+function escapeHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function isValidEmail(email = "") {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
 export default async function handler(req, res) {
-  // Only allow POST requests
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    res.setHeader("Allow", ["POST"]);
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, hospital, specialty, message } = req.body;
+  const { name, email, hospital, specialty, message } = req.body || {};
 
-  // Validate required fields
   if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
+    return res.status(400).json({ error: "Name and email are required" });
+  }
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: "Invalid email address" });
+  }
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    return res.status(500).json({ error: "Email config missing on server" });
   }
 
   try {
-    // Create transporter for Zoho Mail
     const transporter = nodemailer.createTransport({
-      host: 'smtp.zoho.com',
+      host: "smtp.zoho.com",
       port: 465,
-      secure: true, // use SSL
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER,  // info@neurisight.io
-        pass: process.env.EMAIL_PASS,  // Your Zoho password or app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS, // Zoho app password
       },
     });
 
-    // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'info@neurisight.io',
-      replyTo: email,
-      subject: `New Contact Form Submission from ${name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Hospital/Facility:</strong> ${hospital || 'Not provided'}</p>
-        <p><strong>Specialty:</strong> ${specialty || 'Not provided'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message || 'No message provided'}</p>
-      `,
+    const safe = {
+      name: escapeHtml(name),
+      email: escapeHtml(email),
+      hospital: escapeHtml(hospital || "Not provided"),
+      specialty: escapeHtml(specialty || "Not provided"),
+      message: escapeHtml(message || "No message provided").replace(
+        /\n/g,
+        "<br/>",
+      ),
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    const subject = `New Contact Form Submission from ${safe.name}`;
 
-    return res.status(200).json({ success: true, message: 'Email sent successfully' });
+    const html = `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${safe.name}</p>
+      <p><strong>Email:</strong> ${safe.email}</p>
+      <p><strong>Hospital/Facility:</strong> ${safe.hospital}</p>
+      <p><strong>Specialty:</strong> ${safe.specialty}</p>
+      <p><strong>Message:</strong></p>
+      <p>${safe.message}</p>
+    `;
+
+    const text = `New Contact Form Submission
+
+Name: ${name}
+Email: ${email}
+Hospital/Facility: ${hospital || "Not provided"}
+Specialty: ${specialty || "Not provided"}
+
+Message:
+${message || "No message provided"}
+`;
+
+    await transporter.sendMail({
+      from: `"NeuriSight Contact" <${process.env.EMAIL_USER}>`,
+      to: "info@neurisight.io",
+      replyTo: email,
+      subject,
+      html,
+      text,
+    });
+
+    return res
+      .status(200)
+      .json({ success: true, message: "Email sent successfully" });
   } catch (error) {
-    console.error('Email send error:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    console.error("Email send error:", error);
+    // Nodemailer sometimes nests details here:
+    const msg = error?.response || error?.message || "Failed to send email";
+    return res.status(500).json({ error: msg });
   }
 }
