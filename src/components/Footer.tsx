@@ -71,8 +71,9 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>3723 Greenville Avenue STE 75502</li>
-                <li>Dallas, TX 75206</li>
+                {/* <li>3723 Greenville Avenue STE 75502</li>
+                <li>Dallas, TX 75206</li> */}
+                <li>Texas, USA</li>
                 <li className="pt-2">info@NeuriSight.io</li>
                 {/* <li>1-800-NeuriSight</li> */}
               </ul>
