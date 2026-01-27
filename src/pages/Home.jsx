@@ -201,12 +201,12 @@ const NeuriSightLanding = () => {
       </section>
 
       {/* Benefits */}
-      <section id="benefits" className="py-16 bg-gray-800">
+      <section id="benefits" className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-black">
             Benefits
           </h2>
-          <p className="text-center text-gray-300 mb-12">
+          <p className="text-center text-gray-900 mb-12">
             Transform your healthcare with measurable outcomes
           </p>
 
