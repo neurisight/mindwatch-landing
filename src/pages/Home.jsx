@@ -311,7 +311,7 @@ const NeuriSightLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
-                  <span>AI-DI model detected outburst 15 min in advance</span>
+                  <span>AI-DI model detects outburst 15 min in advance</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
