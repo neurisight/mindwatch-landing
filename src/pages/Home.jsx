@@ -34,7 +34,7 @@ const NeuriSightLanding = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition font-medium">
-                  Start Free Trial
+                  Partner With Us
                 </button>
                 <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg hover:bg-teal-50 transition font-medium">
                   Learn How It Works

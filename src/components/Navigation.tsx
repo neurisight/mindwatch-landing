@@ -19,21 +19,21 @@ const Navigation = () => {
             <Link to="/" className="text-gray-700 hover:text-teal-600">
               Home
             </Link>
-            <a href="#how" className="text-gray-700 hover:text-teal-600">
+            <Link to="/#how" className="text-gray-700 hover:text-teal-600">
               How It Works
-            </a>
-            <a href="#benefits" className="text-gray-700 hover:text-teal-600">
+            </Link>
+            <Link to="/#benefits" className="text-gray-700 hover:text-teal-600">
               Benefits
-            </a>
-            <a href="#use-cases" className="text-gray-700 hover:text-teal-600">
+            </Link>
+            <Link to="/#use-cases" className="text-gray-700 hover:text-teal-600">
               Use Cases
-            </a>
+            </Link>
             <Link to="/team" className="text-gray-700 hover:text-teal-600">
               Our Team
             </Link>
-            <a href="#contact" className="text-gray-700 hover:text-teal-600">
+            <Link to="/#contact" className="text-gray-700 hover:text-teal-600">
               Contact
-            </a>
+            </Link>
             <button className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
               Partner With Us
             </button>
@@ -59,31 +59,31 @@ const Navigation = () => {
               Home
             </Link>
 
-            <a
-              href="#how"
+            <Link
+              to="#how"
               className="block py-2 text-gray-700 hover:text-teal-600"
             >
               How It Works
-            </a>
-            <a
-              href="#benefits"
+            </Link>
+            <Link
+              to="#benefits"
               className="block py-2 text-gray-700 hover:text-teal-600"
             >
               Benefits
-            </a>
-            <a
-              href="#use-cases"
+            </Link>
+            <Link
+              to="#use-cases"
               className="block py-2 text-gray-700 hover:text-teal-600"
             >
               Use Cases
-            </a>
+            </Link>
             <Link to="/team" className="text-gray-700 hover:text-teal-600">Our Team</Link>
-            <a
-              href="#contact"
+            <Link
+              to="#contact"
               className="block py-2 text-gray-700 hover:text-teal-600"
             >
               Contact
-            </a>
+            </Link>
             <button className="w-full mt-2 bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
               Partner With Us
             </button>
