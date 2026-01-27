@@ -6,13 +6,11 @@ import {
   UserCheck,
   Brain,
 } from "lucide-react";
-import Navigation from '../components/Navigation'
+import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 
 const NeuriSightLanding = () => {
-  
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
@@ -27,9 +25,12 @@ const NeuriSightLanding = () => {
                 Predict and Prevent Patient Episodes Before They Happen
               </h1>
               <p className="text-lg text-gray-600 mb-6">
-                Using real-time behavioral analysis to help healthcare teams
-                intervene early, ensuring a safe, trauma-aware, and
-                violence-free environment
+                NeuriSight is developing a next-generation AI-powered wearable
+                monitoring platform designed to integrate comprehensive
+                physiological and behavioral data to empower clinicians with
+                earlier, more evidence-based intervention
+                opportunities—currently advancing through clinical advisory
+                development, feasibility research and pilot validation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition font-medium">
@@ -105,9 +106,7 @@ const NeuriSightLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">✓</span>
-                  <span>
-                    Continuous monitoring with real-time risk-score devices
-                  </span>
+                  <span>Continuous monitoring with real-time risk scores.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">✓</span>
@@ -181,8 +180,8 @@ const NeuriSightLanding = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Clinician Dashboard</h3>
               <p className="text-gray-600 mb-4">
-                Staff view the early warning scores, add real context to behavior data,
-                and take action for prevention.
+                Staff view the early warning scores, add real context to
+                behavior data, and take action for prevention.
               </p>
               <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
                 <BarChart3 className="w-16 h-16 text-teal-600" />
@@ -219,8 +218,8 @@ const NeuriSightLanding = () => {
                 Enhanced Observation Metric
               </h3>
               <p className="text-gray-600 mb-4">
-                Improved patient outcomes through early detection and early
-                intervention for agitation triggers.
+                Target: Improved patient outcomes through early detection and
+                early intervention for agitation triggers
               </p>
               <div className="bg-white rounded-lg p-4">
                 <BarChart3 className="w-full h-32 text-teal-600" />
@@ -232,8 +231,9 @@ const NeuriSightLanding = () => {
               <Users className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Fewer Incidents</h3>
               <p className="text-gray-600 mb-4">
-                Reduce workplace aggression and patient self-harm through
-                prevention strategies.
+                Goal: reduction in workplace aggression and patient self-harm
+                through prevention strategies. Pilot feasibility objectives;
+                clinical validation in progress
               </p>
               <div className="bg-white rounded-lg p-4">
                 <div className="w-full h-32 flex items-center justify-center">
@@ -247,12 +247,12 @@ const NeuriSightLanding = () => {
               <BarChart3 className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Staff Efficiency</h3>
               <p className="text-gray-600 mb-4">
-                Enhanced staff safety, reduced burnout, and better resource
-                management.
+                Goal: Enhanced staff safety, reduced burnout, and better
+                resource management.
               </p>
               <div className="bg-white rounded-lg p-4 flex items-center justify-center">
                 <div className="w-32 h-32 rounded-full border-8 border-teal-600 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-teal-600">85%</span>
+                  <span className="text-2xl font-bold text-teal-600">↓ 80%</span>
                 </div>
               </div>
             </div>

@@ -35,7 +35,7 @@ const Navigation = () => {
               Contact
             </a>
             <button className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-              Request Demo
+              Partner With Us
             </button>
           </div>
 
@@ -85,7 +85,7 @@ const Navigation = () => {
               Contact
             </a>
             <button className="w-full mt-2 bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-              Request Demo
+              Partner With Us
             </button>
           </div>
         )}
