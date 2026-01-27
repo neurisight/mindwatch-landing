@@ -33,32 +33,32 @@ const Team = () => {
     // Add more team members here
   ];
 
-  return (
-    <div className="min-h-screen bg-gray-50">
+return (
+    <div className="min-h-screen bg-gray-900">
       <Navigation />
 
-      <section className="py-16 bg-gradient-to-br from-teal-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
             Our Team
           </h1>
-          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
             Meet the passionate experts behind NeuriSight, dedicated to
             transforming behavioral healthcare.
           </p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+                className="bg-gray-800 rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition border border-gray-700"
               >
                 {/* Image container */}
-                <div className="aspect-square bg-gray-100 overflow-hidden">
+                <div className="aspect-square bg-gray-700 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -67,16 +67,16 @@ const Team = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-teal-600 font-medium mb-3">
+                  <h3 className="text-xl font-bold mb-1 text-white">{member.name}</h3>
+                  <p className="text-teal-400 font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                  <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
 
                   <div className="flex space-x-3">
                     <a
                       href={member.linkedin}
-                      className="text-gray-600 hover:text-teal-600"
+                      className="text-gray-400 hover:text-teal-400 transition"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -85,7 +85,7 @@ const Team = () => {
 
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-gray-600 hover:text-teal-600"
+                      className="text-gray-400 hover:text-teal-400 transition"
                     >
                       <Mail className="w-5 h-5" />
                     </a>
