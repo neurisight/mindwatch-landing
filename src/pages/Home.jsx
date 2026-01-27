@@ -132,12 +132,12 @@ const NeuriSightLanding = () => {
       </section>
 
       {/* How It Works */}
-      <section id="how" className="py-16 bg-gray-900">
+      <section id="how" className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-black">
             How NeuriSight Works
           </h2>
-          <p className="text-center text-gray-300 mb-12">
+          <p className="text-center text-gray-900 mb-12">
             Our three-step approach identifies patient agitation through
             biofeedback
           </p>
@@ -190,7 +190,7 @@ const NeuriSightLanding = () => {
           </div>
 
           <div className="mt-12 bg-teal-900/20 border-l-4 border-teal-500 p-6 rounded">
-            <p className="text-gray-300 italic">
+            <p className="text-gray-800 italic">
               "NeuriSight is a clinical decision support tool that integrates
               comprehensive data to empower clinicians in making more timely and
               evidence-based decisions, ultimately advancing the standards of
