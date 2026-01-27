@@ -252,7 +252,9 @@ const NeuriSightLanding = () => {
               </p>
               <div className="bg-white rounded-lg p-4 flex items-center justify-center">
                 <div className="w-32 h-32 rounded-full border-8 border-teal-600 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-teal-600">↓ 80%</span>
+                  <span className="text-2xl font-bold text-teal-600">
+                    ↓ 80%
+                  </span>
                 </div>
               </div>
             </div>
@@ -299,14 +301,17 @@ const NeuriSightLanding = () => {
                 Agitation & Violence Risk Prediction
               </h3>
               <p className="text-gray-600 mb-4">
-                We build AI-powered tracking platforms and support staff in
+                We're piloting AI-powered tracking platforms to support staff in
                 preventing violence and aggression in behavioral health
                 settings.
               </p>
+              <h4 className="text-xl font-bold mb-4">
+                Pilot Case Study:
+              </h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
-                  <span>AI-DI model detected outburst 8 min in advance</span>
+                  <span>AI-DI model detected outburst 15 min in advance</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
@@ -318,8 +323,7 @@ const NeuriSightLanding = () => {
                 <li className="flex items-start">
                   <span className="text-teal-600 mr-2">•</span>
                   <span>
-                    Trauma-aware care & de-escalation techniques prevented a
-                    crisis
+                    Early detection window enabled trauma-aware care response
                   </span>
                 </li>
               </ul>

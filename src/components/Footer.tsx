@@ -11,8 +11,7 @@ const Footer = () => {
                 <span className="text-xl font-bold">NeuriSight</span>
               </div>
               <p className="text-gray-400 text-sm">
-                Transforming behavioral healthcare through AI-powered prediction
-                and prevention.
+                NeuriSight is currently in feasibility research phase - Platform undergoing pilot validation.
               </p>
             </div>
 
