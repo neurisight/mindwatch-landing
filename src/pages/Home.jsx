@@ -165,7 +165,7 @@ const NeuriSightLanding = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">AI Analysis</h3>
               <p className="text-gray-600 mb-4">
-                158 AI events classify long-stream data through pre-built and
+                AI events classify long-stream data through pre-built and
                 adaptive machine learning analytics.
               </p>
               <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
