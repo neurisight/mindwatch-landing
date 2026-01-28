@@ -33,10 +33,26 @@ const NeuriSightLanding = () => {
                 development, feasibility research and pilot validation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition font-medium">
+                <button
+                  onClick={(e) => {
+                    const element = document.querySelector("#contact");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition font-medium"
+                >
                   Partner With Us
                 </button>
-                <button className="border-2 border-teal-600 text-teal-400 px-8 py-3 rounded-lg hover:bg-teal-900/30 transition font-medium">
+                <button
+                  onClick={() => {
+                    const element = document.querySelector("#how");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="border-2 border-teal-600 text-teal-400 px-8 py-3 rounded-lg hover:bg-teal-900/30 transition font-medium"
+                >
                   Learn How It Works
                 </button>
               </div>
@@ -86,7 +102,9 @@ const NeuriSightLanding = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-400 mr-2">✗</span>
-                  <span className="text-gray-300">Reactive measures and lack of agitation logs</span>
+                  <span className="text-gray-300">
+                    Reactive measures and lack of agitation logs
+                  </span>
                 </li>
               </ul>
               <div className="mt-6 bg-gray-800 rounded-lg p-4 border border-gray-600">
@@ -106,7 +124,9 @@ const NeuriSightLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-teal-400 mr-2">✓</span>
-                  <span className="text-gray-300">Continuous monitoring with real-time risk scores.</span>
+                  <span className="text-gray-300">
+                    Continuous monitoring with real-time risk scores.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-400 mr-2">✓</span>
@@ -116,7 +136,9 @@ const NeuriSightLanding = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-400 mr-2">✓</span>
-                  <span className="text-gray-300">Early, data-driven de-escalation strategies</span>
+                  <span className="text-gray-300">
+                    Early, data-driven de-escalation strategies
+                  </span>
                 </li>
               </ul>
               <div className="mt-6 bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -148,7 +170,9 @@ const NeuriSightLanding = () => {
               <div className="bg-teal-900 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-teal-300">1</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Wearable Monitoring</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Wearable Monitoring
+              </h3>
               <p className="text-gray-300 mb-4">
                 Capture user behavior patterns (heart rate, skin conductance)
                 via discrete wearables for early signal identification.
@@ -178,7 +202,9 @@ const NeuriSightLanding = () => {
               <div className="bg-teal-900 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-teal-300">3</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Clinician Dashboard</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Clinician Dashboard
+              </h3>
               <p className="text-gray-300 mb-4">
                 Staff view the early warning scores, add real context to
                 behavior data, and take action for prevention.
@@ -229,7 +255,9 @@ const NeuriSightLanding = () => {
             {/* Benefit 2 */}
             <div className="bg-gray-700 rounded-lg p-6 border border-gray-600">
               <Users className="w-10 h-10 text-teal-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Fewer Incidents</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Fewer Incidents
+              </h3>
               <p className="text-gray-300 mb-4">
                 Goal: reduction in workplace aggression and patient self-harm
                 through prevention strategies. Pilot feasibility objectives;
@@ -245,7 +273,9 @@ const NeuriSightLanding = () => {
             {/* Benefit 3 */}
             <div className="bg-gray-700 rounded-lg p-6 border border-gray-600">
               <BarChart3 className="w-10 h-10 text-teal-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Staff Efficiency</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Staff Efficiency
+              </h3>
               <p className="text-gray-300 mb-4">
                 Goal: Enhanced staff safety, reduced burnout, and better
                 resource management.
@@ -262,7 +292,9 @@ const NeuriSightLanding = () => {
             {/* Benefit 4 */}
             <div className="bg-gray-700 rounded-lg p-6 border border-gray-600">
               <Shield className="w-10 h-10 text-teal-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Reduced Liability</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                Reduced Liability
+              </h3>
               <p className="text-gray-300 mb-4">
                 Maintain the documentation to strengthen accountability and
                 reduce liability risks.
@@ -311,7 +343,9 @@ const NeuriSightLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-teal-400 mr-2">•</span>
-                  <span className="text-gray-300">AI-DI model detects outburst 15 min in advance</span>
+                  <span className="text-gray-300">
+                    AI-DI model detects outburst 15 min in advance
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-400 mr-2">•</span>
@@ -359,19 +393,25 @@ const NeuriSightLanding = () => {
               <div className="bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-teal-700">
                 <Activity className="w-8 h-8 text-teal-400" />
               </div>
-              <p className="text-sm font-medium text-gray-300">HIPAA Compliant</p>
+              <p className="text-sm font-medium text-gray-300">
+                HIPAA Compliant
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-teal-700">
                 <Shield className="w-8 h-8 text-teal-400" />
               </div>
-              <p className="text-sm font-medium text-gray-300">FDA Audit Framework</p>
+              <p className="text-sm font-medium text-gray-300">
+                FDA Audit Framework
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-teal-700">
                 <BarChart3 className="w-8 h-8 text-teal-400" />
               </div>
-              <p className="text-sm font-medium text-gray-300">Clinical Validation</p>
+              <p className="text-sm font-medium text-gray-300">
+                Clinical Validation
+              </p>
             </div>
             <div className="text-center">
               <div className="bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-teal-700">
@@ -383,7 +423,9 @@ const NeuriSightLanding = () => {
               <div className="bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-teal-700">
                 <UserCheck className="w-8 h-8 text-teal-400" />
               </div>
-              <p className="text-sm font-medium text-gray-300">Proactive Personalized</p>
+              <p className="text-sm font-medium text-gray-300">
+                Proactive Personalized
+              </p>
             </div>
           </div>
         </div>
