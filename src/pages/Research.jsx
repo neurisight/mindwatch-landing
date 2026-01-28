@@ -77,9 +77,9 @@ const Research = () => {
       </section>
 
       {/* Funding & Partnership Strategy */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
             Funding & Partnership Strategy
           </h2>
 
@@ -121,7 +121,7 @@ const Research = () => {
             </div>
           </div>
 
-          <p className="text-lg text-gray-300 text-center max-w-4xl mx-auto">
+          <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto">
             We are building relationships with inpatient psychiatric units, behavioral health systems, and research institutions to co-develop evidence-based monitoring solutions grounded in real-world nursing workflows.
           </p>
         </div>
@@ -208,7 +208,7 @@ const Research = () => {
       </section>
 
       {/* Collaborate With Us */}
-      <section className="py-16 bg-gradient-to-br from-teal-900 to-gray-900">
+      <section className="py-16 bg-gradient-to-br from-teal-900 to-gray-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
             Collaborate With Us
