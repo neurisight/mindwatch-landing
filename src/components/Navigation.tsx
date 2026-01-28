@@ -31,12 +31,13 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gray-800 shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-200 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <img src="/logo1.png" alt="NeuriSight Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold text-white">NeuriSight</span>
+            <img src="/logo1-trans.png" alt="NeuriSight Logo" className="w-8 h-8" />
+            <span className="text-xl font-bold text-black">Neuri</span>
+            <span className="text-xl font-bold text-teal-600 -ml-2">Sight</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -47,45 +48,42 @@ const Navigation = () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 setMobileMenuOpen(false);
               }}
-              className="block py-2 text-gray-300 hover:text-teal-400"
+              className="block py-2 text-gray-900 hover:text-teal-400"
             >
               Home
             </Link>
             <a
               href="#how"
               onClick={(e) => handleHashClick(e, "#how")}
-              className="text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="text-gray-900 hover:text-teal-400 cursor-pointer"
             >
               How It Works
             </a>
             <a
               href="#benefits"
               onClick={(e) => handleHashClick(e, "#benefits")}
-              className="text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="text-gray-900 hover:text-teal-400 cursor-pointer"
             >
               Benefits
             </a>
-            <Link to="/research" className="text-gray-300 hover:text-teal-400">
+            <Link to="/research" className="text-gray-900 hover:text-teal-900">
               Research
             </Link>
-            <Link to="/team" className="text-gray-300 hover:text-teal-400">
+            <Link to="/team" className="text-gray-900 hover:text-teal-400">
               Our Team
             </Link>
             <a
               href="#contact"
               onClick={(e) => handleHashClick(e, "#contact")}
-              className="text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition"
             >
-              Contact
+              Partner With Us
             </a>
-            <button className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-              Request Demo
-            </button>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -102,46 +100,43 @@ const Navigation = () => {
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-gray-300 hover:text-teal-400"
+              className="text-gray-900 hover:text-teal-400"
             >
               Home
             </Link>
             <a
               href="#how"
               onClick={(e) => handleHashClick(e, "#how")}
-              className="block py-2 text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="block py-2 text-gray-900 hover:text-teal-400 cursor-pointer"
             >
               How It Works
             </a>
             <a
               href="#benefits"
               onClick={(e) => handleHashClick(e, "#benefits")}
-              className="block py-2 text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="block py-2 text-gray-900 hover:text-teal-400 cursor-pointer"
             >
               Benefits
             </a>
             <Link
               to="/research"
-              className="block py-2 text-gray-300 hover:text-teal-400"
+              className="block py-2 text-gray-900 hover:text-teal-400"
             >
               Research
             </Link>
             <Link
               to="/team"
-              className="block py-2 text-gray-300 hover:text-teal-400"
+              className="block py-2 text-gray-900 hover:text-teal-400"
             >
               Our Team
             </Link>
             <a
               href="#contact"
               onClick={(e) => handleHashClick(e, "#contact")}
-              className="block py-2 text-gray-300 hover:text-teal-400 cursor-pointer"
+              className="w-full mt-2 bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition"
             >
-              Contact
+              Partner With Us
             </a>
-            <button className="w-full mt-2 bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">
-              Request Demo
-            </button>
           </div>
         )}
       </div>
